@@ -1,58 +1,113 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
-    <script src="https://unpkg.com/feather-icons"></script>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="media-query.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+   <link rel="stylesheet" href="styleweed.css">
+    <title>Clean Project IFPR</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-    <div class="nome-aluno">
-        <h1>Login Page - responsive</h1>
-    </div>
+
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom fixed-top nav-details">
+    <div class="col-md-0 mb-0 mb-md-0"></div>      
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 nav-btn">
+            <li><a href="" class="nav-link px-2 link-dark"><i class="bi bi-house">Home</i><a></li>
+
+            <li><a href="" class="nav-link px-2 link-dark"><i class="bi bi-star">Project</i><a></li>
+
+           <li><a href="" class="nav-link px-2 link-dark"><i class="bi bi-journal-bookmark-fill">Portfolio</i><a></li>
+
+           <li><a href="" class="nav-link px-2 link-dark"><i class="bi bi-inbox-fill">Features</i><a></li>
+        </ul>
+        <div class="col-md-1"></div>
+    </header>
+
+
     <main>
-        <section class="login">
-            <div class="imagem">
-                <!-- Aqui vai a imagem nas CSS -->
+        <section class="py-4 text-center container" id="home">
+            <div class="row py-lg-5">
+                <div class="col-lg-6 col-md-8 mx-auto"></div>
+                <br><br><br>
+                <h1 class="fw-light clean titulo">Weed Houses</h1>
+                <p class="lead text-muted descriçao">Arquitetura baseada na utilização da fibra extraida da Cannabis <br>
+                    Transformando sonhos em realidade com criatividade e inovação.
+                </p>
+                <p>
+                    <a href="" class="btn btn-outline-secondary my-2"> <i class="bi bi-flower1"></i> Plantio Medicinal</a>
+                    <a href="" class="btn btn-outline-secondary my-2"> <i class="fa fa-heart"></i> Portfolio</a>
+                </p>
             </div>
-            <div class="formulario">
-                <h1>Login</h1>
-                <p>Seja bem-vindo(a) novamente. Faça login para acessar sua conta e poder fazer as configurações no seu ambiente.</p>
-                <form action="login.php" method="post" autocomplete="on">
-                    <div class="campo">
-                        <i class="material-icons">person</i>
-                        <input type="email" name="login" id="ilogin" placeholder="seu e-mail" autocomplete="email" required maxlength="30">
-                        <label for="ilogin">Login</label>
+        </section>
+
+
+        <div class="album bg-light">
+            <div class="container">
+                <section class="section-area" id="project">
+                    <div class="row row-cols-1 row-cols-md-3 g-3">
+                        <div class="col-md-12">
+                            <div class="section-title">
+                                <h1 class="fw-light"> <i class="bi bi-bank2"></i>Conceito</h1>
+                            </div>
+                            <div class="section-subtitle"> <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio, amet excepturi quidem illo voluptates doloribus unde aliquid cum nisi necessitatibus ea aperiam aspernatur repellendus voluptatem nostrum ut dolor rerum cumque.
+                            </p></div>
+
+                        </div>
                     </div>
-                    <div class="campo">
-                        <i class="material-icons">vpn_key</i>
-                        <input type="password" name="senha" id="isenha" placeholder="sua senha" autocomplete="current-password" required minlength="8" maxlength="20">
-                        <label for="isenha">Senha</label>
+
+                </section>
+
+                <div class="section-separator"><hr></div>
+
+        <section class="section-area" id="install">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h1 class="fw-light"><i class="bi bi-flower3"></i>Orçamentos</h1>
                     </div>
-                    <input type="submit" value="Entrar">
-                    <a href="esqueci.html" class="botao">
-                        Esqueci a senha <i class="material-icons">mail</i>
-                    </a>
-                </form>
-                <div class="icons">
-                    <div class="facebook">
-                        <i data-feather="facebook"></i>
-                    </div>
-                    <div class="twitter">
-                        <i data-feather="twitter"></i>
-                    </div>
-                    <div class="instagram">
-                        <i data-feather="instagram"></i>
+                    <div class="section-description">
+                        <p>
+                            <pre><code>Solicite seu orçamento 
+                            </code></pre>
+                            <br>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dolorem quidem veritatis, sequi voluptatem sit asperiores laborum reiciendis deserunt labore! Id veritatis sed sequi, voluptas alias nobis commodi laboriosam reprehenderit?
+                        </p>
                     </div>
                 </div>
             </div>
+
         </section>
+
+
+        <div class="section-separator"><hr></div>
+
+
+            </div>
+        </div>
+
+
+
     </main>
-    <script>
-        feather.replace();
-    </script>
+
+    <footer class="text-muted py-5 ">
+        <div class="container"><p class="mb-1">
+            Author: Bruno Caetano <br>
+            License: Features
+        </p> <p class="mb-0">
+            <br>
+            made in brazil &#10084;
+        </p>
+    </div>
+    </footer>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

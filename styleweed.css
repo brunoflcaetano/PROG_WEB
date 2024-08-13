@@ -1,0 +1,175 @@
+.nav-details{
+    background-color: #40534C;
+    
+
+}
+
+
+i.house{
+
+    color: #2e4731;
+}
+
+/* adicionei a imagem com ajuda do gpt */
+
+#home {
+    position: relative; /* Define o contexto de posicionamento para o overlay */
+    background-image: url('https://s2.glbimg.com/DpqDjv3EDbxJ0d--v4nd8-RyzL4=/780x440/e.glbimg.com/og/ed/f/original/2021/01/11/flat_house_oskar_proctor.jpg'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover; /* Faz com que a imagem cubra toda a área da seção */
+    background-position: center; /* Centraliza a imagem na seção */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    color: white; /* Ajusta a cor do texto para melhor contraste */
+    padding: 60px 0; /* Adiciona espaçamento em cima e embaixo */
+    overflow: hidden; /* Garante que o overlay não saia da seção */
+}
+
+/* Adiciona a sobreposição */
+#home::before {
+    content: ""; /* Cria um elemento vazio */
+    position: absolute; /* Posiciona o overlay absolutamente dentro da seção */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5); /* Cor preta com 50% de opacidade, ajuste conforme necessário */
+    z-index: 1; /* Garante que o overlay fique acima da imagem de fundo */
+}
+
+/* Ajusta a posição do texto dentro da seção */
+#home > * {
+    position: relative; /* Faz com que o conteúdo da seção fique acima do overlay */
+    z-index: 2; /* Garante que o texto fique acima do overlay */
+}
+
+/* Estilizando o cabeçalho */
+header {
+    background-color: #1A3636;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    color: #708871 !important;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+
+.nav-link:hover {
+    color: #2e4731 !important;
+    text-decoration: underline;
+}
+
+
+main {
+    padding: 60px 0;
+}
+
+section {
+    padding: 60px 0;
+}
+
+h1.titulo{
+    color: #2e4731;
+}
+
+p.descricao{
+    color:#2e4731;
+
+}
+
+h1.clean-project {
+    font-size: 2.5rem;
+    color: #afc2bb;
+}
+
+.btn {
+    border-radius: 30px;
+    padding: 10px 20px;
+}
+
+.btn-outline-secondary {
+    border: 2px solid #d0d0d0;
+    color: #2e4731;
+}
+
+i.btn-outline-secondary{
+    color: #000000;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #74b9b9;
+    color: #b7c1bd;
+}
+
+.album.bg-light {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+}
+
+.section-title h1 {
+    font-size: 2rem;
+    color: #33602a;
+}
+
+.section-subtitle p {
+    font-size: 1.125rem;
+    color: #40534C;
+}
+
+.section-description {
+    background-color: #abd2b3;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+footer {
+    background-color: #7b917b;
+    color: #000000;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 10px 0;
+    color: #1A3636;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Adicionando animações e transições com gpt */
+.nav-link {
+    transition: color 0.3s ease;
+}
+
+.btn {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #666;
+    color: #fff;
+}
+
+section {
+    transition: background-color 0.3s ease;
+}
+
+section:hover {
+    background-color: #eee;
+}
+
