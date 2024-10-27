@@ -1,1 +1,2 @@
-# prog_internet_login
+# Disciplina de Desenvolvimento WEB I.
+# Professor Fernando Alves
