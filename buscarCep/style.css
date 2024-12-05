@@ -1,3 +1,77 @@
-.block:not(:last-child) {
-    margin-bottom: 1.5rem;
+/* Centralizar conteúdo e espaçamento */
+.section {
+  padding: 40px 15px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+/* Estilo do título */
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #034d96;
+  margin-bottom: 20px;
+}
+
+/* Estilo do subtítulo */
+.subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  font-color: #305d8a;
+  margin-bottom: 30px;
+}
+
+/* Estilizar o formulário */
+.box {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(93, 125, 201, 0.99);
+  border: 1px solid #24588d;
+}
+
+/* Campos do formulário */
+.field {
+  margin-bottom: 1rem;
+}
+
+.input {
+  border-radius: 0.375rem;
+  border: 1px solid #305d8a;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  width: 100%;
+}
+
+/* Labels */
+.label {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #07488a;
+  display: block;
+}
+
+/* Agrupamento de campos */
+.rua, .bairro, .cidade, .estado, .ibge {
+  margin-bottom: 1rem;
+}
+
+/* Responsividade para dispositivos menores */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
   }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .container {
+    padding: 10px;
+  }
+}
+
