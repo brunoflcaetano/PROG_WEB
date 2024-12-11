@@ -46,28 +46,35 @@ function pesquisacep(valor) {
   }
 }
 
-async function pesquisaRua(rua) {
-  try {
-      if (!rua) {
-          alert("Por favor, insira o nome da rua.");
-          return;
-      }
+function pesquisaRua(rua) {
+   
+    if (!rua) {
+        alert("Por favor, insira o nome da rua."); 
+        return; 
+    }
 
-      const response = await fetch(`https://viacep.com.br/ws/PR/${rua}/json/`);
-      const data = await response.json();
+    // monta a url do viacep para pesquisar pelo nome da rua estando no pr
+    const url = `https://viacep.com.br/ws/PR/${rua}/json/`;
 
-      if (data && data.length > 0) {
-          const endereco = data[0]; // Pegamos o primeiro resultado
-          document.getElementById('ruaSearch').value = endereco.logradouro || "";
-          document.getElementById('bairroSearch').value = endereco.bairro || "";
-          document.getElementById('cidadeSearch').value = endereco.localidade || "";
-          document.getElementById('ufSearch').value = endereco.uf || "";
-          document.getElementById('ibgeSearch').value = endereco.ibge || "";
-      } else {
-          alert("Rua não encontrada ou não pertence ao Paraná.");
-      }
-  } catch (error) {
-      alert("Erro ao buscar o endereço. Verifique sua conexão ou tente novamente.");
-      console.error(error);
-  }
+    // fetch pra fazer a requisição da api
+    fetch(url)
+        .then(response => response.json()) // converte p json
+        .then(dado => {
+            // verifica se o viacep trouxe algum dado
+            if (dado && dado.length > 0) {
+                const endereco = dado[0]; // pega o primeiro resultado
+
+                // preenche os campos no html com as informações retornadas
+                document.getElementById('ruaSearch').value = endereco.logradouro || "Não disponível";
+                document.getElementById('bairroSearch').value = endereco.bairro || "Não disponível";
+                document.getElementById('cidadeSearch').value = endereco.localidade || "Não disponível";
+                document.getElementById('ufSearch').value = endereco.uf || "Não disponível";
+                document.getElementById('cepSearch').value = endereco.cep || "Não disponível";
+            } else {
+                alert("Nenhum endereço encontrado para essa rua no Paraná."); 
+            }
+        })
+        .catch(() => {
+            alert("Erro ao buscar os dados. Tente novamente."); 
+        });
 }

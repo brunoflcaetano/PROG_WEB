@@ -57,18 +57,12 @@
             </form>
         </section>
 
-        <!-- Pesquisa de Rua -->
         <div class="container my-5">
             <h2 class="text-center mb-4">Pesquisa de Endereço (PR)</h2>
             <form id="searchForm" class="p-4 border rounded shadow-sm">
                 <div class="mb-3">
-                    <label for="ruaInput" class="form-label">Digite a Rua:</label>
-                    <input 
-                        type="text" 
-                        id="ruaInput" 
-                        class="form-control" 
-                        placeholder="Digite o nome da rua" 
-                    />
+                    <label for="ruaInput" class="form-label">Nome da Rua</label>
+                    <input type="text" class="form-control" id="ruaInput" placeholder="Digite o nome da rua">
                 </div>
                 <button 
                     type="button" 
@@ -77,8 +71,36 @@
                 >
                     Pesquisar
                 </button>
+                <div class="mt-4">
+                    <label class="form-label">Resultado:</label>
+                    <div class="form-group">
+                        <label for="cepSearch">CEP:</label>
+                        <input type="text" id="cepSearch" class="form-control" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="ruaSearch">Rua:</label>
+                        <input type="text" id="ruaSearch" class="form-control" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="bairroSearch">Bairro:</label>
+                        <input type="text" id="bairroSearch" class="form-control" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="cidadeSearch">Cidade:</label>
+                        <input type="text" id="cidadeSearch" class="form-control" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="ufSearch">Estado:</label>
+                        <input type="text" id="ufSearch" class="form-control" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="ibgeSearch">IBGE:</label>
+                        <input type="text" id="ibgeSearch" class="form-control" readonly>
+                    </div>
+                </div>
             </form>
         </div>
+        
     </div>
 </body>
 </html>
